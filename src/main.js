@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import wxbUI from './components/index'
+import wxbUI from '../package/components/index'
 
 Vue.config.productionTip = false
 Vue.use(wxbUI)
