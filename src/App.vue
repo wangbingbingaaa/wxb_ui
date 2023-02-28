@@ -1,5 +1,11 @@
 <template>
     <div id="app">
+        <Xbline1 style="height: 20px;">line1</Xbline1>
+        <div style="height: 50px;"></div>
+        <Box14 style="height: 120px;">14</Box14>
+        <div style="height: 50px;"></div>
+        <Box13 style="height: 120px;">13</Box13>
+        <div style="height: 50px;"></div>
         <Box11 style="height: 120px;">11</Box11>
         <div style="height: 50px;"></div>
         <Box12 style="height: 100px;">12</Box12>
