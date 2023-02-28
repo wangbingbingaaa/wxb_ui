@@ -1,5 +1,6 @@
 # 忽略目录
 src/
+package/
 public/
 
 vue.config.js
