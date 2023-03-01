@@ -22,33 +22,33 @@
         <div style="height: 50px;"></div>
         <Xbline1 style="height: 20px;">line1</Xbline1>
         <div style="height: 50px;"></div>
-        <Box14 style="height: 120px;">14</Box14>
+        <Box14 style="height: 120px;">box14</Box14>
         <div style="height: 50px;"></div>
-        <Box13 style="height: 120px;">13</Box13>
+        <Box13 style="height: 120px;">box13</Box13>
         <div style="height: 50px;"></div>
-        <Box11 style="height: 120px;">11</Box11>
+        <Box11 style="height: 120px;">box11</Box11>
         <div style="height: 50px;"></div>
-        <Box12 style="height: 100px;">12</Box12>
+        <Box12 style="height: 100px;">box12</Box12>
         <div style="height: 50px;"></div>
-        <Box10 style="height: 100px;">10</Box10>
+        <Box10 style="height: 100px;">box10</Box10>
         <div style="height: 50px;"></div>
-        <Box9 style="height: 100px;">9</Box9>
+        <Box9 style="height: 100px;">box9</Box9>
         <div style="height: 50px;"></div>
-        <Box8 style="height: 100px;">8</Box8>
+        <Box8 style="height: 100px;">box8</Box8>
         <div style="height: 50px;"></div>
-        <Box7 style="height: 100px;">7</Box7>
+        <Box7 style="height: 100px;">box7</Box7>
         <div style="height: 50px;"></div>
-        <Box6 style="height: 100px;">6</Box6>
+        <Box6 style="height: 100px;">box6</Box6>
         <div style="height: 50px;"></div>
-        <Box5 style="height: 180px;">5</Box5>
+        <Box5 style="height: 180px;">box5</Box5>
         <div style="height: 50px;"></div>
-        <Box1 style="height: 150px;width: 480px;">1</Box1>
+        <Box1 style="height: 150px;width: 480px;" :color="['#00c0ff', '#00fff0']">1</Box1>
         <div style="height: 50px;"></div>
-        <Box2 style="height: 150px;width: 480px;">2</Box2>
+        <Box2 style="height: 150px;width: 480px;" :backgroundColor="`#99dfdf`">2</Box2>
         <div style="height: 50px;"></div>
-        <Box3 style="height: 150px;width: 480px;">3</Box3>
+        <Box3 style="height: 150px;width: 480px;">box3</Box3>
         <div style="height: 50px;"></div>
-        <Box4 style="height: 150px;width: 480px;">4</Box4>
+        <Box4 style="height: 150px;width: 480px;">box4</Box4>
 
     </div>
 </template>

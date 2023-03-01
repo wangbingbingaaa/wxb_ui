@@ -51,27 +51,22 @@ export function uuid (hasHyphen) {
 export function filterNonNumber (array) {
     return array.filter(n => typeof n === 'number')
 }
-export function deepClone (object) {
-    var recursion = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-    if (!object) return object;
-    var parse = JSON.parse,
-        stringify = JSON.stringify;
-    if (!recursion) return parse(stringify(object));
-    var clonedObj = object instanceof Array ? [] : {};
-
-    if (object && (0, _typeof2["default"])(object) === 'object') {
-        for (var key in object) {
-            if (object.hasOwnProperty(key)) {
-                if (object[key] && (0, _typeof2["default"])(object[key]) === 'object') {
-                    clonedObj[key] = deepClone(object[key], true);
-                } else {
-                    clonedObj[key] = object[key];
+export function deepClone (obj) {
+    let objClone = Array.isArray(obj) ? [] : {};
+    if (obj && typeof obj === "object") {
+        for (let key in obj) {
+            if (obj.hasOwnProperty(key)) {    	 //判断obj的子属性是否为对象，如果是，递归复制
+                if (obj[key] && typeof obj[key] === "object") {
+                    objClone[key] = deepClone(obj[key]);
+                } else {                    //如果不是，简单复制
+                    objClone[key] = obj[key];
                 }
             }
         }
     }
+    return objClone;
 
-    return clonedObj;
+
 }
 
 export function deepMerge (target, merged) {
