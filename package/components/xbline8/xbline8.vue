@@ -1,28 +1,16 @@
 <template>
-    <div class="box15" :ref="ref">
+    <div class="xbline8" :ref="ref">
 
-        <svg class="dev-border" :width="width" :height="height">
-            <defs>
-
-                <filter id="fiterBorder12" height="150%" width="150%" x="-25%" y="-25%">
-                    <feMorphology operator="dilate" radius="2" in="SourceAlpha" result="thicken" />
-                    <feGaussianBlur in="thicken" stdDeviation="3" result="blurred" />
-                    <feFlood :flood-color="mergedColor[1]" result="glowColor" />
-                    <feComposite in="glowColor" in2="blurred" operator="in" result="softGlowColored" />
-                    <feMerge>
-                        <feMergeNode in="softGlowColored" />
-                        <feMergeNode in="SourceGraphic" />
-
-                    </feMerge>
-                </filter>
-            </defs>
-            <polygon :fill="backgroundColor" :stroke="mergedColor[0]" stroke-width="1" filter="url(#fiterBorder12)"
-                :points="`0, 0 ${width}, 0 ${width}, ${height} 0, ${height} 0, 0`" />
-
+        <svg class="dev-border" :height="height" :width="height"
+            :viewBox="`-${height / 3} -${height} ${height} ${height * 2}`">
+            <circle fill="none" :stroke="mergedColor[0]" stroke-width="6" stroke-miterlimit="10" cx="0" cy="0"
+                :r="`${height / 2}`" />
+            <line class="fast-hand" fill="none" stroke-linecap="round" :stroke="mergedColor[1]" stroke-width="6"
+                stroke-miterlimit="10" x1="0" y1="0" :x2="`${height / 3}`" y2="0.5"></line>
+            <line class="slow-hand" fill="none" stroke-linecap="round" :stroke="mergedColor[1]" stroke-width="6"
+                stroke-miterlimit="10" x1="0" y1="0" x2="-0.5" :y2="`${height / 5}`"></line>
         </svg>
-        <svg :width="width / 2" :height="height / 2" :key="item" v-for="item in border" :class="`${item} dev-border`">
-            <polyline :stroke="mergedColor[1]" stroke-width="2" style=" fill: none" :points="`5 ,15  5 ,5  15,5`" />
-        </svg>
+
         <div class="slot-content">
             <slot></slot>
         </div>
@@ -33,7 +21,7 @@
 import autoResize from '../../mixin/autoResize';
 import { deepMerge, deepClone } from '../../util/index'
 export default {
-    name: 'Box15',
+    name: 'Xbline8',
     mixins: [autoResize],
     props: {
         color: {
@@ -48,7 +36,7 @@ export default {
     },
     data () {
         return {
-            ref: 'box-15',
+            ref: 'xbline-8',
             border: ['left-top', 'right-top', 'left-bottom', 'right-bottom'],
             defaultColor: ['#0fffc0', '#00a08b'],
             mergedColor: [],
@@ -76,7 +64,7 @@ export default {
             } else {
                 this.mergedColor = this.defaultColor
             }
-            console.log(this.mergedColor)
+
 
 
         }
@@ -86,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.box15 {
+.xbline8 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -97,6 +85,26 @@ export default {
         padding: 20px;
         width: calc(100% - 40px);
         height: calc(100% - 40px);
+    }
+
+    .fast-hand {
+        animation: clock-rotate 2s linear infinite;
+        /*动画时间设置不同*/
+    }
+
+    .slow-hand {
+        animation: clock-rotate 15s linear infinite;
+        /*动画时间设置不同*/
+    }
+
+    @keyframes clock-rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
     }
 
     .dev-border {

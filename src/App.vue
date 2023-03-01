@@ -1,5 +1,25 @@
 <template>
     <div id="app">
+        <Xbline11 style="height:80px;">line11</Xbline11>
+        <div style="height: 50px;"></div>
+        <Xbline10 style="height:80px;">line10</Xbline10>
+        <div style="height: 50px;"></div>
+        <Xbline9 style="height:80px;">line9</Xbline9>
+        <div style="height: 50px;"></div>
+        <Xbline8 style="height: 80px;">line8</Xbline8>
+        <div style="height: 50px;"></div>
+        <Xbline7 style="height: 60px;">line7</Xbline7>
+        <div style="height: 50px;"></div>
+        <Xbline6 style="height: 560px;">line6</Xbline6>
+        <div style="height: 50px;"></div>
+        <Xbline5 style="height: 60px;">line5</Xbline5>
+        <div style="height: 50px;"></div>
+        <Xbline4 style="height: 30px;">line4</Xbline4>
+        <div style="height: 50px;"></div>
+        <Xbline3 style="height: 50px;">line3</Xbline3>
+        <div style="height: 50px;"></div>
+        <Xbline2 style="height: 20px;">line2</Xbline2>
+        <div style="height: 50px;"></div>
         <Xbline1 style="height: 20px;">line1</Xbline1>
         <div style="height: 50px;"></div>
         <Box14 style="height: 120px;">14</Box14>

@@ -1,27 +1,25 @@
 <template>
-    <div class="box15" :ref="ref">
-
+    <div class="xbline3" :ref="ref">
         <svg class="dev-border" :width="width" :height="height">
-            <defs>
+            <path :stroke="mergedColor[1]" stroke-width="3" style=" fill: none" stroke-linecap="round"
+                stroke-linejoin="round" :d="`M 0 ${height / 5 * 2} L ${height / 2} ${height / 5 * 2}`" />
 
-                <filter id="fiterBorder12" height="150%" width="150%" x="-25%" y="-25%">
-                    <feMorphology operator="dilate" radius="2" in="SourceAlpha" result="thicken" />
-                    <feGaussianBlur in="thicken" stdDeviation="3" result="blurred" />
-                    <feFlood :flood-color="mergedColor[1]" result="glowColor" />
-                    <feComposite in="glowColor" in2="blurred" operator="in" result="softGlowColored" />
-                    <feMerge>
-                        <feMergeNode in="softGlowColored" />
-                        <feMergeNode in="SourceGraphic" />
+            <path :stroke="mergedColor[1]" stroke-width="3" style=" fill: none" stroke-linecap="round"
+                stroke-linejoin="round" :d="`M 0 ${height / 5 * 3} L ${height / 2} ${height / 5 * 3} `" />
 
-                    </feMerge>
-                </filter>
-            </defs>
-            <polygon :fill="backgroundColor" :stroke="mergedColor[0]" stroke-width="1" filter="url(#fiterBorder12)"
-                :points="`0, 0 ${width}, 0 ${width}, ${height} 0, ${height} 0, 0`" />
+            <path :stroke="mergedColor[0]" stroke-width="4" style=" fill: none" stroke-linecap="round"
+                stroke-linejoin="round" :d="`M 16, 0 L ${height / 2 + 16},${height / 2} L 16, ${height} `" />
 
-        </svg>
-        <svg :width="width / 2" :height="height / 2" :key="item" v-for="item in border" :class="`${item} dev-border`">
-            <polyline :stroke="mergedColor[1]" stroke-width="2" style=" fill: none" :points="`5 ,15  5 ,5  15,5`" />
+            <path :stroke="mergedColor[0]" stroke-width="4" style="fill: none" stroke-linecap="round"
+                stroke-linejoin="round"
+                :d="`M ${width - 16}, 0 L ${width - height / 2 - 16},${height / 2} L ${width - 16},${height} `" />
+
+            <path :stroke="mergedColor[1]" stroke-width="3" style=" fill: none" stroke-linecap="round"
+                stroke-linejoin="round" :d="`M ${width} ${height / 5 * 2} L ${width - height / 2} ${height / 5 * 2}`" />
+
+            <path :stroke="mergedColor[1]" stroke-width="3" style=" fill: none" stroke-linecap="round"
+                stroke-linejoin="round" :d="`M ${width - height / 2}  ${height / 5 * 3} L ${width} ${height / 5 * 3} `" />
+
         </svg>
         <div class="slot-content">
             <slot></slot>
@@ -33,7 +31,7 @@
 import autoResize from '../../mixin/autoResize';
 import { deepMerge, deepClone } from '../../util/index'
 export default {
-    name: 'Box15',
+    name: 'Xbline3',
     mixins: [autoResize],
     props: {
         color: {
@@ -48,11 +46,10 @@ export default {
     },
     data () {
         return {
-            ref: 'box-15',
+            ref: 'xbline3',
             border: ['left-top', 'right-top', 'left-bottom', 'right-bottom'],
-            defaultColor: ['#0fffc0', '#00a08b'],
+            defaultColor: ['#00a08b', '#00a08b'],
             mergedColor: [],
-            filterId: `border-box-12`,
         }
     },
     computed: {
@@ -76,7 +73,7 @@ export default {
             } else {
                 this.mergedColor = this.defaultColor
             }
-            console.log(this.mergedColor)
+
 
 
         }
@@ -86,7 +83,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.box15 {
+.xbline3 {
     position: relative;
     width: 100%;
     height: 100%;

@@ -77,7 +77,7 @@ export default {
             } else {
                 this.mergedColor = this.defaultColor
             }
-            console.log(this.mergedColor)
+
 
 
         }

@@ -3,12 +3,12 @@
         <svg class="dev-border" :width="width" :height="height">
             <path :stroke="mergedColor[1]" stroke-width="2" style="fill: none" stroke-linecap="round"
                 stroke-linejoin="round" :d="`M 0,0 L ${height / 2},${height / 2} L 0,${height} `" />
-            <path :stroke="mergedColor[1]" stroke-width="3" style=" fill: none" stroke-linecap="round"
+            <path :stroke="mergedColor[0]" stroke-width="3" style=" fill: none" stroke-linecap="round"
                 stroke-linejoin="round" :d="`M 6,0 L ${height / 2 + 6},${height / 2} L 6,${height} `" />
 
             <path :stroke="mergedColor[1]" stroke-width="2" style="fill: none" stroke-linecap="round"
                 stroke-linejoin="round" :d="`M ${width},0 L ${width - height / 2},${height / 2} L ${width},${height} `" />
-            <path :stroke="mergedColor[1]" stroke-width="3" style="fill: none" stroke-linecap="round"
+            <path :stroke="mergedColor[0]" stroke-width="3" style="fill: none" stroke-linecap="round"
                 stroke-linejoin="round"
                 :d="`M ${width - 6},0 L ${width - height / 2 - 6},${height / 2} L ${width - 6},${height} `" />
         </svg>
@@ -40,7 +40,7 @@ export default {
         return {
             ref: 'xbline-1',
             border: ['left-top', 'right-top',],
-            defaultColor: ['#0fffc0', '#00a08b'],
+            defaultColor: ['#0fffc0', '#0fffc0'],
             mergedColor: [],
             filterId: `border-box-12`,
         }
@@ -66,7 +66,7 @@ export default {
             } else {
                 this.mergedColor = this.defaultColor
             }
-            console.log(this.mergedColor)
+
 
 
         }
