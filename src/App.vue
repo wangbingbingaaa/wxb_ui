@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <d3drag style="height:280px;"></d3drag>
         <Xbline11 style="height:80px;">line11</Xbline11>
         <div style="height: 50px;"></div>
         <Xbline10 style="height:80px;">line10</Xbline10>
