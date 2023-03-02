@@ -1,6 +1,8 @@
 <template>
     <div id="app">
-        <d3drag style="height:280px;"></d3drag>
+        <d3drag style="height:280px;">
+            <image x="20" y="20" width="300" height="80" :xlink:href="imgUrl"></image>
+        </d3drag>
         <Xbline11 style="height:80px;">line11</Xbline11>
         <div style="height: 50px;"></div>
         <Xbline10 style="height:80px;">line10</Xbline10>
@@ -55,19 +57,37 @@
 </template>
 
 <script>
-
+import * as d3 from 'd3';
 export default {
     name: 'App',
     components: {
     },
+    data () {
+        return {
+            imgUrl: ''
+        }
+    },
+    created () {
+        this.imgUrl = require('./assets/logo.png')
+
+    },
     mounted () {
-        // let svg = this.makeSVG('svg');
-        // let g = this.makeSVG('g');
-        // var circle = this.makeSVG('circle', { cx: 50, cy: 50, r: 10, stroke: 'black', 'stroke-width': 2, fill: 'red' });
-        // let terget = document.getElementById('s');
-        // g.appendChild(circle);
-        // svg.appendChild(g);
-        // terget.appendChild(svg);
+        // let imgUrl = require('./assets/logo.png')
+        this.$nextTick(() => {
+
+            // d3.select("g")
+            //     .append("image")
+            //     .attr("x", 10)
+            //     .attr("y", 20)
+            //     .attr("width", 400)
+            //     .attr("height", 400)
+            //     .attr("xlink:href", imgUrl)
+            //     .transition()
+            //     .ease(d3.easeCircleOut);
+
+
+
+        })
 
     },
     methods: {
