@@ -1,9 +1,16 @@
 <template>
     <div id="app">
+        <GeometryText style="height:300px"></GeometryText>
+        <div style="height: 50px;"></div>
+        <TextStroke3d style="height:580px"></TextStroke3d>
+        <div style="height: 50px;"></div>
+        <threeLine style="height:380px"></threeLine>
+        <div style="height: 50px;"></div>
+
         <d3drag style="height:280px;">
             <image x="20" y="20" width="300" height="80" :xlink:href="imgUrl"></image>
         </d3drag>
-        <Xbline11 style="height:80px;">line11</Xbline11>
+        <Box16 style="height:380px;">Box16</Box16>
         <div style="height: 50px;"></div>
         <Xbline10 style="height:80px;">line10</Xbline10>
         <div style="height: 50px;"></div>

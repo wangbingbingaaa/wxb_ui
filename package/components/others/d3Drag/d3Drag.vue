@@ -81,7 +81,6 @@ export default {
                     d3.zoom() // <-B
                         .scaleExtent([1, 10]) // <-C
                         .on("zoom", function zoomed (e) {
-                            console.log(e, '111111')
                             svg1.attr("transform", "translate(" + e.transform.x + ", " + e.transform.y + ")scale(" + e.transform.k + ")");
                         }) // <-D
                 )
