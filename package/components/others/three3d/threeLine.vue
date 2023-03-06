@@ -165,10 +165,8 @@ export default {
             });
             renderer.setSize(width, height); //设置渲染区域尺寸
             renderer.setClearColor(this.backgroundColor, 1); //设置背景颜色
-            // document.body.appendChild(renderer.domElement); //body元素中插入canvas对象
             document.getElementById('threeline1').appendChild(renderer.domElement);
 
-            console.log(this.textName)
             scene.add(tag(this.textName[0], 0, 0, 0, this.fontSize));
             scene.add(tag(this.textName[1], 100, 0, 0, this.fontSize));
             var labelRenderer = createLabelRender('threeline1', this.width, this.height)
