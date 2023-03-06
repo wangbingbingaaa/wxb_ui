@@ -10,7 +10,7 @@
         <d3drag style="height:280px;">
             <image x="20" y="20" width="300" height="80" :xlink:href="imgUrl"></image>
         </d3drag>
-        <Box16 style="height:380px;">Box16</Box16>
+        <Box16 style="height:180px;">Box16</Box16>
         <div style="height: 50px;"></div>
         <Xbline10 style="height:80px;">line10</Xbline10>
         <div style="height: 50px;"></div>

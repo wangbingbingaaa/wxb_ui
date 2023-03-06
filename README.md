@@ -1,5 +1,7 @@
 自己研发的UI美化插件目前还在继续做 ✌
 
+具体使用方法可查看 https://blog.csdn.net/weixin_42910765/article/details/129282121
+
 ## 使用方式
 
 >  npm install wxb_ui
