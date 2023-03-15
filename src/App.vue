@@ -1,5 +1,18 @@
 <template>
     <div id="app">
+        <xbheader4 style="height:80px"></xbheader4>
+        <div style="height: 50px;"></div>
+        <xbheader3 style="height:80px"></xbheader3>
+        <div style="height: 50px;"></div>
+        <xbheader2 style="height:80px"></xbheader2>
+        <div style="height: 50px;"></div>
+        <xbheader1 style="height:80px"></xbheader1>
+        <div style="height: 50px;"></div>
+        <BgHeader2 style="height:80px"></BgHeader2>
+        <div style="height: 50px;"></div>
+        <BgHeader1 style="height:80px"></BgHeader1>
+
+        <div style="height: 50px;"></div>
         <GeometryText style="height:300px"></GeometryText>
         <div style="height: 50px;"></div>
         <TextStroke3d style="height:580px"></TextStroke3d>
